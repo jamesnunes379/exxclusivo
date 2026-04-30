@@ -1,0 +1,603 @@
+/* =====================================================
+   EXXCLUSIVO TRANSPORTES – Pages CSS (Cidades & Aeroporto)
+===================================================== */
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 20% 50%, rgba(242,201,76,0.06) 0%, transparent 60%),
+    linear-gradient(135deg, #0B0B0B 0%, #161616 100%);
+}
+
+.page-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23F2C94C' fill-opacity='0.025'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 72px 0 64px;
+  max-width: 780px;
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.page-hero__breadcrumb a {
+  color: var(--gray-dark);
+  transition: var(--transition);
+}
+.page-hero__breadcrumb a:hover { color: var(--gold); }
+.page-hero__breadcrumb i { font-size: 0.6rem; color: var(--gold); }
+.page-hero__breadcrumb span { color: var(--gold); }
+
+.page-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(242,201,76,0.1);
+  border: 1px solid rgba(242,201,76,0.3);
+  color: var(--gold);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.page-hero__title {
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.page-hero__subtitle {
+  font-size: 1.05rem;
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Gold divider line */
+.gold-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  border-radius: 3px;
+  margin-bottom: 32px;
+}
+
+/* ===== CITY CONTENT ===== */
+.city-content {
+  background: var(--black);
+  padding: 80px 0;
+}
+
+.city-content__inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Main text column */
+.city-main__lead {
+  font-size: 1.12rem;
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 36px;
+  border-left: 3px solid var(--gold);
+  padding-left: 20px;
+}
+
+.city-main h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.city-main h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 28px 0 14px;
+}
+
+.city-main p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+/* Services checklist */
+.city-services-list {
+  background: var(--black-card);
+  border: 1px solid rgba(242,201,76,0.15);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  margin: 32px 0;
+}
+
+.city-services-list h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.city-services-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.city-services-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--gray);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.city-services-list li i {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.city-services-list li strong {
+  color: var(--white);
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+/* CTA inline */
+.city-cta-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 36px 0;
+}
+
+/* ===== SIDEBAR ===== */
+.city-sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Quick contact card */
+.sidebar-contact {
+  background: var(--black-card);
+  border: 1px solid rgba(242,201,76,0.2);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(242,201,76,0.1);
+}
+
+.sidebar-contact__icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(242,201,76,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 0 auto 16px;
+}
+
+.sidebar-contact h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.sidebar-contact p {
+  color: var(--gray-dark);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.sidebar-contact__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Mini features card */
+.sidebar-features {
+  background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.sidebar-features h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sidebar-features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.sidebar-features li i {
+  color: var(--gold);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* Other cities card */
+.sidebar-cities {
+  background: var(--black-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.sidebar-cities h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sidebar-cities ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-cities li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray);
+  font-size: 0.85rem;
+  transition: var(--transition);
+  padding: 4px 0;
+}
+.sidebar-cities li a i {
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+.sidebar-cities li a:hover {
+  color: var(--gold);
+  padding-left: 6px;
+}
+
+/* ===== CITY DIFFERENTIALS STRIP ===== */
+.city-diff-strip {
+  background: var(--black-soft);
+  padding: 64px 0;
+  border-top: 1px solid rgba(242,201,76,0.08);
+  border-bottom: 1px solid rgba(242,201,76,0.08);
+}
+
+.city-diff-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.city-diff-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.city-diff-item i {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+.city-diff-item strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+
+.city-diff-item span {
+  font-size: 0.8rem;
+  color: var(--gray-dark);
+  line-height: 1.5;
+}
+
+/* ===== MINI CTA SECTION ===== */
+.city-mini-cta {
+  background: var(--black);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.city-mini-cta__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.city-mini-cta__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.city-mini-cta__sub {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* ===== VIRACOPOS SPECIAL ===== */
+.airport-hero {
+  background:
+    radial-gradient(ellipse 60% 70% at 30% 50%, rgba(242,201,76,0.07) 0%, transparent 60%),
+    linear-gradient(135deg, #0B0B0B 0%, #111111 100%);
+}
+
+.airport-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.airport-info-card {
+  background: var(--black-card);
+  border: 1px solid rgba(242,201,76,0.15);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.airport-info-card:hover {
+  border-color: rgba(242,201,76,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(242,201,76,0.1);
+}
+
+.airport-info-card i {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.airport-info-card h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.airport-info-card p {
+  font-size: 0.83rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR DROPDOWN CITIES ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-dropdown__toggle i {
+  font-size: 0.6rem;
+  transition: var(--transition);
+}
+
+.nav-dropdown:hover .nav-dropdown__toggle i,
+.nav-dropdown.open .nav-dropdown__toggle i {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black-card);
+  border: 1px solid rgba(242,201,76,0.15);
+  border-radius: var(--radius);
+  padding: 8px 0;
+  min-width: 260px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 200;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown.open .nav-dropdown__menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown__menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: var(--gray);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-dropdown__menu a i {
+  color: var(--gold);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.nav-dropdown__menu a:hover {
+  color: var(--gold);
+  background: rgba(242,201,76,0.05);
+  padding-left: 26px;
+}
+
+.nav-dropdown__menu .dropdown-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 6px 0;
+}
+
+.nav-dropdown__menu .dropdown-special {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+/* ===== MOBILE DROPDOWN ===== */
+.mobile-cities-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-cities-list {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0 4px 16px;
+  border-left: 2px solid rgba(242,201,76,0.2);
+  margin-top: 8px;
+}
+
+.mobile-cities-list.open { display: flex; }
+
+.mobile-cities-list a {
+  color: var(--gray-dark);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.mobile-cities-list a:hover { color: var(--gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .city-content__inner {
+    grid-template-columns: 1fr;
+  }
+  .city-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .city-diff-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .airport-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero { min-height: 360px; }
+  .page-hero__actions { flex-direction: column; }
+  .page-hero__actions .btn { width: 100%; justify-content: center; }
+  .city-sidebar { grid-template-columns: 1fr; }
+  .city-diff-strip__grid { grid-template-columns: 1fr 1fr; }
+  .airport-info-grid { grid-template-columns: 1fr; }
+  .nav-dropdown__menu { left: 0; transform: none; }
+  .nav-dropdown:hover .nav-dropdown__menu,
+  .nav-dropdown.open .nav-dropdown__menu { transform: none; }
+}
+
+@media (max-width: 480px) {
+  .city-diff-strip__grid { grid-template-columns: 1fr 1fr; }
+  .city-mini-cta__title { font-size: 1.5rem; }
+}

@@ -1,58 +1,57 @@
-# EXXCLUSIVO TRANSPORTES – Landing Page Premium
+# EXXCLUSIVO TRANSPORTES – Site Completo
 
 ## 🚗 Sobre o Projeto
 
-Landing page moderna, sofisticada e persuasiva para a **EXXCLUSIVO TRANSPORTES**, empresa especializada em transporte executivo e particular. Design premium com paleta preto + dourado, mobile-first e foco em conversão para WhatsApp.
+Site moderno, sofisticado e persuasivo para a **EXXCLUSIVO TRANSPORTES**, empresa especializada em transporte executivo e particular. Design premium com paleta preto + dourado, mobile-first e foco em conversão para WhatsApp. Expandido de landing page para site multi-páginas com SEO local por cidade.
 
 ---
 
 ## ✅ Funcionalidades Implementadas
 
-### Estrutura da Página
-- **Navbar fixa** com scroll effect, logo e botão CTA de WhatsApp
-- **Hero Section** com imagem de fundo, overlay escuro, headline forte, subtítulo, CTAs e número de telefone visível
-- **Stats Strip** com contadores animados (clientes, disponibilidade, pontualidade, avaliação)
-- **Seção de Serviços** (6 cards): Transfer Aeroporto, Corporativo, Eventos, Executivo Particular, Intermunicipais, Médico
-- **Seção de Frota** com imagem do veículo e lista de diferenciais
-- **Seção de Diferenciais** (6 cards): Motoristas, Pontualidade, Atendimento, Veículos, 24h, Privacidade
-- **Seção de Atendimento/Cobertura**: Cidades, aeroportos (VCP, CGH, GRU)
-- **Depoimentos** (4 cards com avaliação 5 estrelas)
+### Página Principal (index.html)
+- **Navbar fixa** com scroll effect, logo, **dropdown de cidades** e botão CTA WhatsApp
+- **Hero Section** com imagem de fundo, overlay escuro, headline forte e CTAs
+- **Stats Strip** com contadores animados (500+ clientes, 24h, 100% pontualidade, 5★)
+- **Seção de Serviços** (6 cards com hover tilt 3D)
+- **Seção de Frota** com foto real do motorista executivo
+- **Seção de Diferenciais** (6 cards)
+- **Região de Atendimento** com aeroportos VCP, CGH, GRU
+- **6 Depoimentos** com avaliação 5 estrelas
 - **Formulário de Agendamento Express** integrado ao WhatsApp
-- **CTA Final** com botão grande de WhatsApp
-- **Rodapé** com logo, links rápidos, contato e redes sociais
-- **Botão flutuante do WhatsApp** com tooltip animado
+- **CTA Final** com botão gigante de WhatsApp
+- **Rodapé** com links para todas as cidades
+- **Botão flutuante do WhatsApp** com tooltip
 - **Botão Voltar ao Topo**
 
-### Identidade Visual
-- Paleta: Preto `#0B0B0B` + Dourado `#F2C94C` + Branco + Cinza
-- Tipografia: **Montserrat** (Google Fonts)
-- Efeito shimmer dourado no headline principal
-- Animações AOS (scroll-triggered)
-- Hover tilt em cards de serviços
-- Pulse animation nos CTAs principais
+### Páginas de Cidades (15 páginas)
+Cada página possui: Hero com breadcrumb, strip de diferenciais, conteúdo principal, checklist de serviços, sidebar com contato/features/outras cidades, mini CTA final.
 
-### Interatividade
-- Navbar responsiva com menu hambúrguer (mobile)
-- Contadores animados na seção de stats
-- Formulário com máscara de telefone e validação
-- Integração com WhatsApp via link direto com mensagem pré-formatada
-- Smooth scroll em todos os links âncora
-- Active link highlight na navbar conforme seção visível
+### Página Estratégica – Aeroporto
+- **transfer-aeroporto-viracopos.html** com conteúdo aprofundado sobre o VCP
 
 ---
 
-## 📍 URIs / Seções
+## 📍 Mapa de URLs
 
-| Âncora | Seção |
-|--------|-------|
-| `#hero` | Hero / Topo |
-| `#servicos` | Nossos Serviços |
-| `#frota` | Nossa Frota |
-| `#diferenciais` | Diferenciais |
-| `#atendimento` | Região de Atendimento |
-| `#depoimentos` | Depoimentos |
-| `#agendamento` | Agendamento Express |
-| `#contato` | CTA Final |
+| Arquivo | Página |
+|---------|--------|
+| `index.html` | Home – Landing Page Principal |
+| `transporte-executivo-campinas.html` | Campinas |
+| `transporte-executivo-valinhos.html` | Valinhos |
+| `transporte-executivo-vinhedo.html` | Vinhedo |
+| `transporte-executivo-paulinia.html` | Paulínia |
+| `transporte-executivo-sumare.html` | Sumaré |
+| `transporte-executivo-hortolandia.html` | Hortolândia |
+| `transporte-executivo-indaiatuba.html` | Indaiatuba |
+| `transporte-executivo-sorocaba.html` | Sorocaba |
+| `transporte-executivo-sao-paulo.html` | São Paulo |
+| `transporte-executivo-ribeirao-preto.html` | Ribeirão Preto |
+| `transporte-executivo-sao-jose-dos-campos.html` | São José dos Campos |
+| `transporte-executivo-rio-de-janeiro.html` | Rio de Janeiro |
+| `transporte-executivo-belo-horizonte.html` | Belo Horizonte |
+| `transporte-executivo-curitiba.html` | Curitiba |
+| `transporte-executivo-florianopolis.html` | Florianópolis |
+| `transfer-aeroporto-viracopos.html` | ✈️ Transfer Viracopos (VCP) |
 
 ---
 
@@ -66,12 +65,18 @@ Landing page moderna, sofisticada e persuasiva para a **EXXCLUSIVO TRANSPORTES**
 ## 📁 Estrutura de Arquivos
 
 ```
-index.html          → Página principal
+index.html                              → Home / Landing Page
+transfer-aeroporto-viracopos.html       → Página estratégica VCP
+transporte-executivo-[cidade].html      → 15 páginas de cidades
 css/
-  style.css         → Estilos completos (tema premium)
+  style.css                             → Estilos principais (tema premium)
+  pages.css                             → Estilos das páginas internas
 js/
-  main.js           → JavaScript (animações, interatividade, formulário)
-README.md           → Documentação
+  main.js                               → JS da home (contadores, formulário, etc.)
+  components.js                         → Navbar e Footer injetados em todas as páginas
+images/
+  frota-executiva.jpg                   → Foto real do motorista executivo
+README.md
 ```
 
 ---
@@ -80,7 +85,7 @@ README.md           → Documentação
 
 - HTML5 semântico
 - CSS3 com Custom Properties (variáveis CSS)
-- JavaScript ES6+
+- JavaScript ES6+ (componentes injetados via DOM)
 - [AOS](https://michalsnik.github.io/aos/) – Animate On Scroll
 - [Font Awesome 6](https://fontawesome.com/) – Ícones
 - [Montserrat](https://fonts.google.com/specimen/Montserrat) – Google Fonts
@@ -97,6 +102,8 @@ README.md           → Documentação
 - [ ] Página de tarifas/preços
 - [ ] Blog / conteúdo SEO
 - [ ] Google Analytics / Meta Pixel
+- [ ] Sitemap XML para SEO
+- [ ] Schema Markup (JSON-LD) para SEO local
 
 ---
 

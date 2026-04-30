@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
 </head>
 <body>
 
@@ -35,13 +36,63 @@
       <nav class="navbar__menu" id="navMenu">
         <a href="#servicos" class="nav-link">Serviços</a>
         <a href="#frota" class="nav-link">Frota</a>
+
+        <!-- Dropdown Cidades -->
+        <div class="nav-dropdown" id="citiesDropdown">
+          <span class="nav-link nav-dropdown__toggle">Cidades <i class="fas fa-chevron-down"></i></span>
+          <div class="nav-dropdown__menu">
+            <a href="transporte-executivo-campinas.html"><i class="fas fa-chevron-right"></i> Campinas</a>
+            <a href="transporte-executivo-valinhos.html"><i class="fas fa-chevron-right"></i> Valinhos</a>
+            <a href="transporte-executivo-vinhedo.html"><i class="fas fa-chevron-right"></i> Vinhedo</a>
+            <a href="transporte-executivo-paulinia.html"><i class="fas fa-chevron-right"></i> Paulínia</a>
+            <a href="transporte-executivo-sumare.html"><i class="fas fa-chevron-right"></i> Sumaré</a>
+            <a href="transporte-executivo-hortolandia.html"><i class="fas fa-chevron-right"></i> Hortolândia</a>
+            <a href="transporte-executivo-indaiatuba.html"><i class="fas fa-chevron-right"></i> Indaiatuba</a>
+            <a href="transporte-executivo-sorocaba.html"><i class="fas fa-chevron-right"></i> Sorocaba</a>
+            <a href="transporte-executivo-sao-paulo.html"><i class="fas fa-chevron-right"></i> São Paulo</a>
+            <a href="transporte-executivo-ribeirao-preto.html"><i class="fas fa-chevron-right"></i> Ribeirão Preto</a>
+            <a href="transporte-executivo-sao-jose-dos-campos.html"><i class="fas fa-chevron-right"></i> São José dos Campos</a>
+            <a href="transporte-executivo-rio-de-janeiro.html"><i class="fas fa-chevron-right"></i> Rio de Janeiro</a>
+            <a href="transporte-executivo-belo-horizonte.html"><i class="fas fa-chevron-right"></i> Belo Horizonte</a>
+            <a href="transporte-executivo-curitiba.html"><i class="fas fa-chevron-right"></i> Curitiba</a>
+            <a href="transporte-executivo-florianopolis.html"><i class="fas fa-chevron-right"></i> Florianópolis</a>
+            <div class="dropdown-divider"></div>
+            <a href="transfer-aeroporto-viracopos.html" class="dropdown-special"><i class="fas fa-plane"></i> Transfer Viracopos</a>
+          </div>
+        </div>
+
         <a href="#diferenciais" class="nav-link">Diferenciais</a>
         <a href="#depoimentos" class="nav-link">Depoimentos</a>
         <a href="#contato" class="nav-link">Contato</a>
-        <a href="https://wa.me/5519995750193?text=Olá!%20Gostaria%20de%20solicitar%20uma%20corrida%20executiva." 
+        <a href="https://wa.me/5519995750193?text=Olá!%20Gostaria%20de%20solicitar%20uma%20corrida%20executiva."
            target="_blank" class="btn btn--gold navbar__cta">
           <i class="fab fa-whatsapp"></i> Solicitar Corrida
         </a>
+
+        <!-- Mobile cities toggle -->
+        <div class="mobile-nav-cities">
+          <button class="mobile-cities-toggle" id="mobileCitiesToggle">
+            Cidades <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="mobile-cities-list" id="mobileCitiesList">
+            <a href="transporte-executivo-campinas.html">Campinas</a>
+            <a href="transporte-executivo-valinhos.html">Valinhos</a>
+            <a href="transporte-executivo-vinhedo.html">Vinhedo</a>
+            <a href="transporte-executivo-paulinia.html">Paulínia</a>
+            <a href="transporte-executivo-sumare.html">Sumaré</a>
+            <a href="transporte-executivo-hortolandia.html">Hortolândia</a>
+            <a href="transporte-executivo-indaiatuba.html">Indaiatuba</a>
+            <a href="transporte-executivo-sorocaba.html">Sorocaba</a>
+            <a href="transporte-executivo-sao-paulo.html">São Paulo</a>
+            <a href="transporte-executivo-ribeirao-preto.html">Ribeirão Preto</a>
+            <a href="transporte-executivo-sao-jose-dos-campos.html">São José dos Campos</a>
+            <a href="transporte-executivo-rio-de-janeiro.html">Rio de Janeiro</a>
+            <a href="transporte-executivo-belo-horizonte.html">Belo Horizonte</a>
+            <a href="transporte-executivo-curitiba.html">Curitiba</a>
+            <a href="transporte-executivo-florianopolis.html">Florianópolis</a>
+            <a href="transfer-aeroporto-viracopos.html" style="color:var(--gold);font-weight:700;">✈ Transfer Viracopos</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -595,5 +646,6 @@
   <!-- AOS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>
