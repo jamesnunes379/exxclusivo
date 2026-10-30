@@ -26,13 +26,8 @@ const CITIES = [
 
 /* ---------- NAVBAR ---------- */
 function renderNavbar(activePage = '') {
-  const isSubPage = window.location.pathname.includes('/transporte-executivo-') ||
-                    window.location.pathname.includes('/transfer-aeroporto-');
-  const root = isSubPage ? '../' : '';
-
-  const citiesLinks = CITIES.map(c =>
-    `<a href="${root}transporte-executivo-${c.slug}.html"><i class="fas fa-chevron-right"></i> ${c.name}</a>`
-  ).join('');
+  // Todas as páginas estão na raiz do projeto
+  const root = '';
 
   return `
   <header id="navbar" class="navbar">
@@ -46,38 +41,12 @@ function renderNavbar(activePage = '') {
       </button>
       <nav class="navbar__menu" id="navMenu">
         <a href="${root}index.html#servicos" class="nav-link">Serviços</a>
-        <a href="${root}index.html#frota" class="nav-link">Frota</a>
-        <div class="nav-dropdown" id="citiesDropdown">
-          <span class="nav-link nav-dropdown__toggle">
-            Cidades <i class="fas fa-chevron-down"></i>
-          </span>
-          <div class="nav-dropdown__menu">
-            ${citiesLinks}
-            <div class="dropdown-divider"></div>
-            <a href="${root}transfer-aeroporto-viracopos.html" class="dropdown-special">
-              <i class="fas fa-plane"></i> Transfer Viracopos
-            </a>
-          </div>
-        </div>
         <a href="${root}index.html#diferenciais" class="nav-link">Diferenciais</a>
         <a href="${root}index.html#depoimentos" class="nav-link">Depoimentos</a>
         <a href="${WA_BASE}?text=Olá!%20Gostaria%20de%20solicitar%20uma%20corrida%20executiva."
            target="_blank" class="btn btn--gold navbar__cta">
           <i class="fab fa-whatsapp"></i> Solicitar Corrida
         </a>
-
-        <!-- Mobile only cities -->
-        <div class="mobile-nav-cities">
-          <button class="mobile-cities-toggle" id="mobileCitiesToggle">
-            Cidades <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="mobile-cities-list" id="mobileCitiesList">
-            ${CITIES.map(c =>
-              `<a href="${root}transporte-executivo-${c.slug}.html">${c.name}</a>`
-            ).join('')}
-            <a href="${root}transfer-aeroporto-viracopos.html" style="color:var(--gold);font-weight:700;">✈ Transfer Viracopos</a>
-          </div>
-        </div>
       </nav>
     </div>
   </header>`;
@@ -85,9 +54,8 @@ function renderNavbar(activePage = '') {
 
 /* ---------- FOOTER ---------- */
 function renderFooter() {
-  const isSubPage = window.location.pathname.includes('/transporte-executivo-') ||
-                    window.location.pathname.includes('/transfer-aeroporto-');
-  const root = isSubPage ? '../' : '';
+  // Todas as páginas estão na raiz do projeto
+  const root = '';
 
   return `
   <footer class="footer">

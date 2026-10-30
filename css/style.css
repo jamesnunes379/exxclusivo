@@ -35,8 +35,11 @@ html {
   font-size: 16px;
 }
 
+html { overflow-x: hidden; max-width: 100%; }
+
 body {
   font-family: var(--font-main);
+  max-width: 100%;
   background: var(--black);
   color: var(--white);
   line-height: 1.7;
@@ -290,6 +293,7 @@ ul { list-style: none; }
 .hero__content {
   position: relative;
   z-index: 2;
+  width: 100%;
   max-width: 750px;
   padding-top: 100px;
   padding-bottom: 80px;

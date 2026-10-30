@@ -9,7 +9,7 @@ Site moderno, sofisticado e persuasivo para a **EXXCLUSIVO TRANSPORTES**, empres
 ## ✅ Funcionalidades Implementadas
 
 ### Página Principal (index.html)
-- **Navbar fixa** com scroll effect, logo, **dropdown de cidades** e botão CTA WhatsApp
+- **Navbar fixa** com scroll effect, logo, links (Serviços, Diferenciais, Depoimentos, Contato) e botão CTA WhatsApp. Os links "Frota" e "Cidades" foram removidos do menu; as páginas de cidades continuam acessíveis pelo rodapé e pela barra lateral de cada página
 - **Hero Section** com imagem de fundo, overlay escuro, headline forte e CTAs
 - **Stats Strip** com contadores animados (500+ clientes, 24h, 100% pontualidade, 5★)
 - **Seção de Serviços** (6 cards com hover tilt 3D)
